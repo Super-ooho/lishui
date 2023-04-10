@@ -111,6 +111,7 @@
 
 <script lang="ts" setup>
     import { reactive, ref } from 'vue'
+    import { ElMessageBox} from 'element-plus'
 
     let isTableShow = ref(false)
     const guangfuValue = ref('')
@@ -290,6 +291,12 @@
             }
             console.log(tableShow)
 
+        }
+        else{
+            // console.log("nihao")
+            ElMessageBox.alert('暂无此扩充容量信息，请重新预设参数', '提示', {
+                confirmButtonText: 'OK',
+            })
         }
         if(beishuStr in paitanData){
             paitanValue = paitanData[beishuStr]

@@ -82,6 +82,7 @@
 
 <script lang="ts" setup>
     import { reactive, ref } from 'vue'
+    import { ElMessageBox} from 'element-plus'
     const guangfuValue = ref('')
     const fuheValue = ref('')
     const shuidianValue = ref('')
@@ -593,7 +594,7 @@
             qishuilv: '0',
             score2: '100',
             putong: '28.50%',
-            score3: '27.66%',
+            score3: '40',
             guangfu: '23.37%',
             score4: '40',
             fuhe: '6.07%',
@@ -881,13 +882,22 @@
         guihuaqianData.pop()
         guihuahouData.pop()
         let beishuStr = guangfuValue.value + fuheValue.value + shuidianValue.value
-        for(let i in beishuOption){
-            if(beishuStr == beishuOption[i]){
-                console.log(qianTableData[i])
-                guihuaqianData.push(qianTableData[i])
-                guihuahouData.push(houTableData[i])
-                break
+        // console.log(beishuStr)
+        if(beishuOption.includes(beishuStr)){
+            // console.log("nihao")
+            for(let i in beishuOption){
+                if(beishuStr == beishuOption[i]){
+                    // console.log(qianTableData[i])
+                    guihuaqianData.push(qianTableData[i])
+                    guihuahouData.push(houTableData[i])
+                    break
+                }
             }
+        }
+        else{
+            ElMessageBox.alert('暂无此预设的相关信息，请重新预设参数', '提示', {
+                confirmButtonText: 'OK',
+            })
         }
     }
     

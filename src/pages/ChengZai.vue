@@ -3,8 +3,8 @@
       <el-aside width="150px" class="asideStyle">
         <div>
             <div class="beishu">
-                <span>选择节点</span>
-                <el-select v-model="jiedian" class="m-2" placeholder="Select">
+                <div class="jiedianButton">选择节点</div>
+                <el-select v-model="jiedian" class="m-2 jiedianButton" placeholder="Select">
                     <el-option
                     v-for="item in jiedianOptions"
                     :key="item.value"
@@ -18,35 +18,105 @@
       </el-aside>
       <el-main>
         <div class="mainMap">
-            <div class="jiedian1"></div>
-            <div class="jiedian2"></div>
-            <div class="jiedian3"></div>
-            <div class="jiedian4"></div>
-            <div class="jiedian5"></div>
-            <div class="jiedian6"></div>
-            <div class="jiedian7"></div>
-            <div class="jiedian8"></div>
-            <div class="jiedian9"></div>
-            <div class="jiedian10"></div>
-            <div class="jiedian11"></div>
-            <div class="jiedian12"></div>
-            <div class="jiedian13"></div>
-            <div class="jiedian14"></div>
-            <div class="jiedian15"></div>
-            <div class="jiedian16"></div>
-            <div class="jiedian17"></div>
-            <div class="jiedian18"></div>
-            <div class="jiedian19"></div>
-            <div class="jiedian20"></div>
-            <div class="jiedian21"></div>
-            <div class="jiedian22"></div>
-
+            <div v-show="visiable[1]" class="jiedian">
+                <div class="jiedian1"></div>
+                <span class="jiedian1">{{ chengzaiNum[0] }}</span>
+            </div>
+            <div v-show="visiable[2]" class="jiedian">
+                <div class="jiedian2"></div>
+                <span class="jiedian2">{{ chengzaiNum[1] }}</span>
+            </div>
+            <div v-show="visiable[3]" class="jiedian">
+                <div class="jiedian3"></div>
+                <span class="jiedian3">{{ chengzaiNum[2] }}</span>
+            </div>
+            <div v-show="visiable[4]" class="jiedian">
+                <div class="jiedian4"></div>
+                <span class="jiedian4">{{ chengzaiNum[3] }}</span>
+            </div>
+            <div v-show="visiable[5]" class="jiedian">
+                <div class="jiedian5"></div>
+                <span class="jiedian5">{{ chengzaiNum[4] }}</span>
+            </div>
+            <div v-show="visiable[6]" class="jiedian">
+                <div class="jiedian6"></div>
+                <span class="jiedian6">{{ chengzaiNum[5] }}</span>
+            </div>
+            <div v-show="visiable[7]" class="jiedian">
+                <div class="jiedian7"></div>
+                <span class="jiedian7">{{ chengzaiNum[6] }}</span>
+            </div>
+            <div v-show="visiable[8]" class="jiedian">
+                <div class="jiedian8"></div>
+                <span class="jiedian8">{{ chengzaiNum[7] }}</span>
+            </div>
+            <div v-show="visiable[9]" class="jiedian">
+                <div class="jiedian9"></div>
+                <span class="jiedian9">{{ chengzaiNum[8] }}</span>
+            </div>
+            <div v-show="visiable[10]" class="jiedian">
+                <div class="jiedian10"></div>
+                <span class="jiedian10">{{ chengzaiNum[9] }}</span>
+            </div>
+            <div v-show="visiable[11]" class="jiedian">
+                <div class="jiedian11"></div>
+                <span class="jiedian11">{{ chengzaiNum[10] }}</span>
+            </div>
+            <div v-show="visiable[12]" class="jiedian">
+                <div class="jiedian12"></div>
+                <span class="jiedian12">{{ chengzaiNum[11] }}</span>
+            </div>
+            <div v-show="visiable[13]" class="jiedian">
+                <div class="jiedian13"></div>
+                <span class="jiedian13">{{ chengzaiNum[12] }}</span>
+            </div>
+            <div v-show="visiable[14]" class="jiedian">
+                <div class="jiedian14"></div>
+                <span class="jiedian14">{{ chengzaiNum[13] }}</span>
+            </div>
+            <div v-show="visiable[15]" class="jiedian">
+                <div class="jiedian15"></div>
+                <span class="jiedian15">{{ chengzaiNum[14] }}</span>
+            </div>
+            <div v-show="visiable[16]" class="jiedian">
+                <div class="jiedian16"></div>
+                <span class="jiedian16">{{ chengzaiNum[15] }}</span>
+            </div>
+            <div v-show="visiable[17]" class="jiedian">
+                <div class="jiedian17"></div>
+                <span class="jiedian17">{{ chengzaiNum[16] }}</span>
+            </div>
+            <div v-show="visiable[18]" class="jiedian">
+                <div class="jiedian18"></div>
+                <span class="jiedian18">{{ chengzaiNum[17] }}</span>
+            </div>
+            <div v-show="visiable[19]" class="jiedian">
+                <div class="jiedian19"></div>
+                <span class="jiedian19">{{ chengzaiNum[18] }}</span>
+            </div>
+            <div v-show="visiable[20]" class="jiedian">
+                <div class="jiedian20"></div>
+                <span class="jiedian20">{{ chengzaiNum[19] }}</span>
+            </div>
+            <div v-show="visiable[21]" class="jiedian">
+                <div class="jiedian21"></div>
+                <span class="jiedian21">{{ chengzaiNum[20] }}</span>
+            </div>
+            <div v-show="visiable[22]" class="jiedian">
+                <div class="jiedian22"></div>
+                <span class="jiedian22">{{ chengzaiNum[21] }}</span>
+            </div>
+            <div class="showData">
+                <div>该节点承载能力：</div>
+                <div>{{ showChengzai }}</div>
+            </div>
         </div>
       </el-main>
     </el-container>
 </template>
 
 <script lang="ts" setup>
+
     import { ReactiveFlags, reactive, ref } from 'vue'
     const jiedian = ref('')
     const jiedianOptions = [
@@ -162,153 +232,31 @@
         '20': false,
         '21': false,
         '22': false,
-        '23': false,
-        '24': false,
-        '25': false,
-        '26': false,
-        '27': false,
-        '28': false,
     })
-
+    let showChengzai:any = ref('')
+    const chengzaiNum = [0.00,7677.21,7677.21,7677.21,7642.91,3329.64,5135.79,5135.79,5135.79,7484.61,7484.61,4103.59,7456.29,4839.41,4839.41,7456.29,7456.29,4400.26,4400.26,3045.79,3045.79,3045.79]
     function submit(){
-
-    }
-
-    function appear1(event:any){
-        for(let i = 0; i<=28; i++){
+        // console.log(visiable[jiedian.value])
+        for(let i=1; i<=22; i++){
             visiable[i] = false
         }
-        visiable[1] = true
-    }
-    function appear2(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[2] = true
-    }
-    function appear3(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[3] = true
-    }
-    function appear4(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[4] = true
-    }
-    function appear5(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[5] = true
-        visiable[6] = true
-    }
-    function appear6(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[7] = true
-        visiable[8] = true
-    }
-    function appear7(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[9] = true
-    }
-    function appear8(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-    }
-    function appear9(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[11] = true
-    }
-    function appear10(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-    }
-    function appear11(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[13] = true
-        visiable[14] = true
-    }
-    function appear12(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[15] = true
-    }
-    function appear13(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[16] = true
-        visiable[17] = true
-    }
-    function appear14(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[18] = true
-    }
-    function appear15(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[19] = true
-    }
-    function appear16(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[20] = true
-        visiable[21] = true
-    }
-    function appear17(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[22] = true
-    }
-    function appear18(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[23] = true
-        visiable[24] = true
-    }
-    function appear19(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[25] = true
-    }
-    function appear20(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[26] = true
-        visiable[27] = true
-    }
-    function appear21(event:any){
-        for(let i = 0; i<=28; i++){
-            visiable[i] = false
-        }
-        visiable[28] = true
+        visiable[jiedian.value] = true
+        let temp:any = Number(jiedian.value) - 1
+        temp = temp.toString()
+        showChengzai = chengzaiNum[temp]
     }
 
 </script>
 
 <style scoped>
+.jiedianButton{
+    margin-bottom: 15px;
+}
+.jiedian > span{
+    font-size: 20px;
+    color: red;
+    z-index: 1;
+} 
 .jiedian1{
     width: 20px;
     height: 20px;
@@ -324,190 +272,197 @@
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 168px;
     top: 221px;
 }
-.jiedian1{
+.jiedian3{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 205px;
     top: 221px;
 }
-.jiedian1{
+.jiedian4{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 260px;
     top: 221px;
 }
-.jiedian1{
+.jiedian5{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 287px;
     top: 221px;
 }
-.jiedian1{
+.jiedian6{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 309px;
+    top: 270px;
 }
-.jiedian1{
+.jiedian7{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 274px;
+    top: 136px;
 }
-.jiedian1{
+.jiedian8{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 274px;
+    top: 90px;
 }
-.jiedian1{
+.jiedian9{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 274px;
+    top: 43px;
 }
-.jiedian1{
+.jiedian10{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 330px;
     top: 221px;
 }
-.jiedian1{
+.jiedian11{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 363px;
     top: 221px;
 }
-.jiedian1{
+.jiedian12{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 385px;
+    top: 268px;
 }
-.jiedian1{
+.jiedian13{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 408px;
     top: 221px;
 }
-.jiedian1{
+.jiedian14{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 422px;
+    top: 145px;
 }
-.jiedian1{
+.jiedian15{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 422px;
+    top: 100px;
 }
-.jiedian1{
+.jiedian16{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 449px;
     top: 221px;
 }
-.jiedian1{
+.jiedian17{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 470px;
+    top: 268px;
 }
-.jiedian1{
+.jiedian18{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 494px;
     top: 221px;
 }
-.jiedian1{
+.jiedian19{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 515px;
+    top: 268px;
 }
-.jiedian1{
+.jiedian20{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 541px;
     top: 221px;
 }
-.jiedian1{
+.jiedian21{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 562px;
+    top: 174px;
 }
-.jiedian1{
+.jiedian22{
     width: 20px;
     height: 20px;
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
+    left: 588px;
     top: 221px;
 }
-
+.showData{
+    width: 170px;
+    height: 100px;
+    /* background-color: rebeccapurple; */
+    position: absolute;
+    left: 710px;
+    font-size: 21px;
+}
 .diaImg{
     width: 100%;
 }
@@ -521,7 +476,7 @@
 }
 
 .beishu{
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .mainMap{
