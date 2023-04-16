@@ -13,7 +13,7 @@
                     />
                 </el-select>
             </div>
-            <el-button :plain="true" @click="submit">success</el-button>
+            <el-button :plain="true" @click="submit">查询</el-button>
         </div>
       </el-aside>
       <el-main>

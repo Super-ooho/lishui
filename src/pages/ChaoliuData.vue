@@ -14,7 +14,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>倍数一选择</span>
+                <span>光伏倍数</span>
                 <el-select v-model="beishuvalue1" class="m-2" placeholder="Select">
                     <el-option
                     v-for="item in beishu1Options"
@@ -25,7 +25,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>倍数二选择</span>
+                <span>水电倍数</span>
                 <el-select v-model="beishuvalue2" class="m-2" placeholder="Select">
                     <el-option
                     v-for="item in beishu2Options"
@@ -36,7 +36,7 @@
                 </el-select>
             </div>
             <!-- <el-button type="primary" class="chaxunButton">查询</el-button> -->
-            <el-button :plain="true" @click="open2">success</el-button>
+            <el-button :plain="true" @click="open2">查询</el-button>
         </div>
       </el-aside>
       <el-main>
