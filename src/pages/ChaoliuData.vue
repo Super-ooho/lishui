@@ -235,11 +235,11 @@
         const ifRongliang = legalRongliang()
         if(ifRongliang && seasonvalue.value!==''){
             ElMessage({
-                message: 'Congrats, this is a success message.',
+                message: '潮流数据填入成功！',
                 type: 'success',
             })
         }else{
-            ElMessageBox.alert('暂无此扩充容量信息，请重新预设参数', '提示', {
+            ElMessageBox.alert('暂无此潮流信息，请重新预设参数', '提示', {
                 confirmButtonText: 'OK',
             })
         }
