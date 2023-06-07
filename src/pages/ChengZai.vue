@@ -1,5 +1,5 @@
 <template>
-    <el-container>
+    <el-container class="container">
       <el-aside width="150px" class="asideStyle">
         <div>
             <div class="beishu">
@@ -107,17 +107,108 @@
                 <span class="jiedian22">{{ chengzaiNum[21] }}</span>
             </div>
             <div class="showData">
-                <div>该节点承载能力：</div>
+                <div>该节点承载能力（kW）：</div>
                 <div>{{ showChengzai }}</div>
             </div>
         </div>
       </el-main>
+      <img src="../assets/chengzaili.png" alt="" class="chengzailiImg">
     </el-container>
 </template>
 
 <script lang="ts" setup>
 
     import { ReactiveFlags, reactive, ref } from 'vue'
+    const tableData = [
+    {
+        jiedian: '1',
+        chengzai: '',
+    },
+    {
+        jiedian: '2',
+        chengzai: '',
+    },
+    {
+        jiedian: '3',
+        chengzai: '',
+    },
+    {
+        jiedian: '4',
+        chengzai: '',
+    },
+    {
+        jiedian: '5',
+        chengzai: '',
+    },
+    {
+        jiedian: '6',
+        chengzai: '',
+    },
+    {
+        jiedian: '7',
+        chengzai: '',
+    },
+    {
+        jiedian: '8',
+        chengzai: '',
+    },
+    {
+        jiedian: '9',
+        chengzai: '',
+    },
+    {
+        jiedian: '10',
+        chengzai: '',
+    },
+    {
+        jiedian: '11',
+        chengzai: '',
+    },
+    {
+        jiedian: '12',
+        chengzai: '',
+    },
+    {
+        jiedian: '13',
+        chengzai: '',
+    },
+    {
+        jiedian: '14',
+        chengzai: '',
+    },
+    {
+        jiedian: '15',
+        chengzai: '',
+    },
+    {
+        jiedian: '16',
+        chengzai: '',
+    },
+    {
+        jiedian: '17',
+        chengzai: '',
+    },
+    {
+        jiedian: '18',
+        chengzai: '',
+    },
+    {
+        jiedian: '19',
+        chengzai: '',
+    },
+    {
+        jiedian: '20',
+        chengzai: '',
+    },
+    {
+        jiedian: '21',
+        chengzai: '',
+    },
+    {
+        jiedian: '22',
+        chengzai: '',
+    },
+    ]
     const jiedian = ref('')
     const jiedianOptions = [
     {
@@ -249,6 +340,17 @@
 </script>
 
 <style scoped>
+.container{
+    position: relative;
+}
+.chengzailiImg{
+    position: absolute;
+    z-index: 1;
+    width: 1100px;
+    height: 35px;
+    top: 390px;
+    left: 20px;
+}
 .jiedianButton{
     margin-bottom: 15px;
 }
@@ -456,12 +558,12 @@
     top: 221px;
 }
 .showData{
-    width: 170px;
-    height: 100px;
+    width: 185px;
+    height: 350px;
     /* background-color: rebeccapurple; */
     position: absolute;
     left: 710px;
-    font-size: 21px;
+    font-size: 15px;
 }
 .diaImg{
     width: 100%;
@@ -483,7 +585,7 @@
     background-image:url("../assets/jingning.png");
     background-repeat:no-repeat;  
     width:700px;   /*疑问？：div的尺寸如何自适应背景图的尺寸*/
-    height:345px;
+    height:500px;
     background-size:100%;
     position: relative;
     left: 30px;

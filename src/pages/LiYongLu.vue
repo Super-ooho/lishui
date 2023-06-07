@@ -39,18 +39,22 @@
             <el-button :plain="true" @click="submit">查询</el-button>
         </div>
       </el-aside>
-      <el-main style="position: relative;height: 550px;margin: 0;padding: 0;">
+      <el-main style="position: relative;height: 570px;margin: 0;padding: 0;">
         <div class="mainMap">
             
         </div>
+        <div class="tabletitle">
+            <div class="titleqian">规划前</div>
+            <div class="titlehou">规划后</div>
+        </div>
         <div class="tableRegion">
-            <el-table :data="guihuaqianData" style="width: 100%" size="small" empty-text="规划前数据">
+            <el-table :data="guihuaqianData" style="width: 100%" size="small">
                 <el-table-column prop="qiguanglv" label="弃光率" width="60" />
                 <el-table-column prop="score1" label="得分" width="50" />
                 <el-table-column prop="qishuilv" label="弃水率" width="80" />
                 <el-table-column prop="score2" label="得分" width="50" />
                 <el-table-column prop="putong" label="普通线路平均负载率" width="80" />
-                <el-table-column prop="score3" label="得分" width="50" />
+                <el-table-column prop="score3" label="得分" width="70" />
                 <el-table-column prop="guangfu" label="光伏线路极限负载率" width="80" />
                 <el-table-column prop="score4" label="得分" width="50" />
                 <el-table-column prop="fuhe" label="负荷线路极限负载率" width="80" />
@@ -59,13 +63,13 @@
                 <el-table-column prop="score6" label="得分" width="50" />
                 <el-table-column prop="generalScore" label="总得分" />
             </el-table>
-            <el-table :data="guihuahouData" style="width: 100%" size="small" :show-header="isHeader" empty-text="规划后数据">
+            <el-table :data="guihuahouData" style="width: 100%" size="small" :show-header="isHeader">
                 <el-table-column prop="qiguanglv" label="弃光率" width="60" />
                 <el-table-column prop="score1" label="得分" width="50" />
                 <el-table-column prop="qishuilv" label="弃水率" width="80" />
                 <el-table-column prop="score2" label="得分" width="50" />
                 <el-table-column prop="putong" label="普通线路平均负载率" width="80" />
-                <el-table-column prop="score3" label="得分" width="50" />
+                <el-table-column prop="score3" label="得分" width="70" />
                 <el-table-column prop="guangfu" label="光伏线路极限负载率" width="80" />
                 <el-table-column prop="score4" label="得分" width="50" />
                 <el-table-column prop="fuhe" label="负荷线路极限负载率" width="80" />
@@ -150,6 +154,7 @@
     },
     ]
     const qianTableData = [
+        
         {
             qiguanglv: '0',
             score1: '100',
@@ -513,6 +518,7 @@
         
     ]
     const houTableData = [
+        
         {
             qiguanglv: '0',
             score1: '100',
@@ -875,8 +881,36 @@
         },
         
     ]
-    let guihuaqianData:any = reactive([])
-    let guihuahouData:any = reactive([])
+    let guihuaqianData:any = reactive([{
+            qiguanglv: '无',
+            score1: '无',
+            qishuilv: '无',
+            score2: '无',
+            putong: '无',
+            score3: '无',
+            guangfu: '无',
+            score4: '无',
+            fuhe: '无',
+            score5: '无',
+            zuse: '无',
+            score6: '无',
+            generalScore: '无',
+        }])
+    let guihuahouData:any = reactive([{
+            qiguanglv: '无',
+            score1: '无',
+            qishuilv: '无',
+            score2: '无',
+            putong: '无',
+            score3: '无',
+            guangfu: '无',
+            score4: '无',
+            fuhe: '无',
+            score5: '无',
+            zuse: '无',
+            score6: '无',
+            generalScore: '无',
+        }])
     let beishuOption = ['111','112','113','211','212','213','311','312','313','411','412','413','511','512','513','611','612','613','711','712','713','811','812','813']																																							
     function submit(){
         guihuaqianData.pop()
@@ -932,9 +966,24 @@
     left: 60px;
 }
 .tableRegion{
-    margin-left: 30px;
+    /* margin-left: 30px; */
+    position: absolute;
+    top: 380px;
+    left: 70px;
 }
 
+.tabletitle{
+    position: absolute;
+    top: 442px;
+    left: 0;
+    font-size: 15px;
+}
+
+.titlehou{
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
 </style>
    
    
