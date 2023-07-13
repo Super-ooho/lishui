@@ -19,19 +19,22 @@
         <div class="demo-collapse">
             <el-collapse accordion>
                 <el-collapse-item title="夏季数据可视化" name="1">
-                    <img src="../assets/1yougong.png" alt="" class="imgsize">
-                    <img src="../assets/1guangfu.png" alt="" class="imgsize">
-                    <img src="../assets/1shuidian.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua11.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua12.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua13.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua14.png" alt="" class="imgsize">
                 </el-collapse-item>
                 <el-collapse-item title="过渡季数据可视化" name="2">
-                    <img src="../assets/2yougong.png" alt="" class="imgsize">
-                    <img src="../assets/2guangfu.png" alt="" class="imgsize">
-                    <img src="../assets/2shuidian.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua21.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua22.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua23.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua24.png" alt="" class="imgsize">
                 </el-collapse-item>
                 <el-collapse-item title="冬季数据可视化" name="3">
-                    <img src="../assets/3yougong.png" alt="" class="imgsize">
-                    <img src="../assets/3guangfu.png" alt="" class="imgsize">
-                    <img src="../assets/3shuidian.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua31.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua32.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua33.png" alt="" class="imgsize">
+                    <img src="../assets/keshihua34.png" alt="" class="imgsize">
                 </el-collapse-item>
             </el-collapse>
         </div>

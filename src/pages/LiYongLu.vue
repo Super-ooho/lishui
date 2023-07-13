@@ -94,36 +94,36 @@
     const guangfuOptions = [
     {
         value: '1',
-        label: '284',
+        label: '300',
     },							
 
     {
         value: '2',
-        label: '568',
+        label: '600',
     },
     {
         value: '3',
-        label: '853',
+        label: '900',
     },
     {
         value: '4',
-        label: '1137',
+        label: '1200',
     },
     {
         value: '5',
-        label: '1422',
+        label: '1500',
     },
     {
         value: '6',
-        label: '1706',
+        label: '1800',
     },
     {
         value: '7',
-        label: '1991',
+        label: '2100',
     },
     {
         value: '8',
-        label: '2275',
+        label: '2400',
     },
     ]
     const fuheOptions = [
@@ -143,16 +143,16 @@
     const shuidianOptions = [
     {
         value: '1',
-        label: '824',
+        label: '800',
     },		
 
     {
         value: '2',
-        label: '1648',
+        label: '1600',
     },
     {
         value: '3',
-        label: '2473',
+        label: '2400',
     },
     ]
     const qianTableData = [
