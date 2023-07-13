@@ -107,7 +107,7 @@
                 <span class="jiedian22">{{ chengzaiNum[21] }}</span>
             </div>
             <div class="showData">
-                <div>该节点承载能力（kW）：</div>
+                <div>该节点承载能力(kW)：</div>
                 <div>{{ showChengzai }}</div>
             </div>
         </div>

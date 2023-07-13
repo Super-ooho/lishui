@@ -14,7 +14,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>光伏倍数</span>
+                <span>光伏装机容量(kW)</span>
                 <el-select v-model="beishuvalue1" class="m-2" placeholder="Select">
                     <el-option
                     v-for="item in beishu1Options"
@@ -25,7 +25,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>水电倍数</span>
+                <span>水电装机容量(kW)</span>
                 <el-select v-model="beishuvalue2" class="m-2" placeholder="Select">
                     <el-option
                     v-for="item in beishu2Options"
@@ -175,29 +175,51 @@
     const beishu1Options = [
     {
         value: '1',
-        label: '1',
-    },
+        label: '284',
+    },							
+
     {
         value: '2',
-        label: '2',
+        label: '568',
     },
     {
         value: '3',
-        label: '3',
+        label: '853',
+    },
+    {
+        value: '4',
+        label: '1137',
+    },
+    {
+        value: '5',
+        label: '1422',
+    },
+    {
+        value: '6',
+        label: '1706',
+    },
+    {
+        value: '7',
+        label: '1991',
+    },
+    {
+        value: '8',
+        label: '2275',
     },
     ]
     const beishu2Options = [
     {
         value: '1',
-        label: '1',
-    },
+        label: '824',
+    },		
+
     {
         value: '2',
-        label: '2',
+        label: '1648',
     },
     {
         value: '3',
-        label: '3',
+        label: '2473',
     },
     ]
     const centerDialogVisible1 = ref(false)
@@ -219,15 +241,15 @@
     // const rongliang9 = (beishuvalue1.value=='8' && beishuvalue2.value=='3')
     // const ifRongliang = (rongliang1 || rongliang2 || rongliang3 || rongliang4 || rongliang5 || rongliang6 || rongliang7 || rongliang8 || rongliang9)
     function legalRongliang(){
-        const rongliang1 = (beishuvalue1.value=='1' && beishuvalue2.value=='1')
-        const rongliang2 = (beishuvalue1.value=='1' && beishuvalue2.value=='3')
-        const rongliang3 = (beishuvalue1.value=='2' && beishuvalue2.value=='3')
-        const rongliang4 = (beishuvalue1.value=='3' && beishuvalue2.value=='3')
-        const rongliang5 = (beishuvalue1.value=='4' && beishuvalue2.value=='3')
-        const rongliang6 = (beishuvalue1.value=='5' && beishuvalue2.value=='3')
-        const rongliang7 = (beishuvalue1.value=='6' && beishuvalue2.value=='3')
-        const rongliang8 = (beishuvalue1.value=='7' && beishuvalue2.value=='3')
-        const rongliang9 = (beishuvalue1.value=='8' && beishuvalue2.value=='3')
+        const rongliang1 = (beishuvalue1.value=='1' )
+        const rongliang2 = (beishuvalue1.value=='1' )
+        const rongliang3 = (beishuvalue1.value=='2' )
+        const rongliang4 = (beishuvalue1.value=='3' )
+        const rongliang5 = (beishuvalue1.value=='4' )
+        const rongliang6 = (beishuvalue1.value=='5' )
+        const rongliang7 = (beishuvalue1.value=='6' )
+        const rongliang8 = (beishuvalue1.value=='7' )
+        const rongliang9 = (beishuvalue1.value=='8' )
         const ifRongliang = (rongliang1 || rongliang2 || rongliang3 || rongliang4 || rongliang5 || rongliang6 || rongliang7 || rongliang8 || rongliang9)
         return ifRongliang
     }

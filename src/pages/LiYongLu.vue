@@ -3,7 +3,7 @@
       <el-aside width="100px" class="asideStyle">
         <div>
             <div>
-                <span>光伏倍数</span>
+                <span>光伏装机容量(kW)</span>
                 <el-select v-model="guangfuValue" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in guangfuOptions"
@@ -14,7 +14,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>负荷倍数</span>
+                <span>负荷装机容量(kW)</span>
                 <el-select v-model="fuheValue" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in fuheOptions"
@@ -25,7 +25,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>水电倍数</span>
+                <span>水电装机容量(kW)</span>
                 <el-select v-model="shuidianValue" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in shuidianOptions"
@@ -94,35 +94,36 @@
     const guangfuOptions = [
     {
         value: '1',
-        label: '1',
-    },
+        label: '284',
+    },							
+
     {
         value: '2',
-        label: '2',
+        label: '568',
     },
     {
         value: '3',
-        label: '3',
+        label: '853',
     },
     {
         value: '4',
-        label: '4',
+        label: '1137',
     },
     {
         value: '5',
-        label: '5',
+        label: '1422',
     },
     {
         value: '6',
-        label: '6',
+        label: '1706',
     },
     {
         value: '7',
-        label: '7',
+        label: '1991',
     },
     {
         value: '8',
-        label: '8',
+        label: '2275',
     },
     ]
     const fuheOptions = [
@@ -142,15 +143,16 @@
     const shuidianOptions = [
     {
         value: '1',
-        label: '1',
-    },
+        label: '824',
+    },		
+
     {
         value: '2',
-        label: '2',
+        label: '1648',
     },
     {
         value: '3',
-        label: '3',
+        label: '2473',
     },
     ]
     const qianTableData = [
