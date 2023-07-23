@@ -3,7 +3,7 @@
       <el-aside width="80px" class="asideStyle">
         <div>
             <div>
-                <span>11号节点光伏扩建容量</span>
+                <span>11号节点光伏扩建容量(kW)</span>
                 <el-select v-model="guangfuValue11" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in guangfuOptions"
@@ -14,7 +14,7 @@
                 </el-select>
             </div>
             <div>
-                <span>15号节点光伏扩建容量</span>
+                <span>15号节点光伏扩建容量(kW)</span>
                 <el-select v-model="guangfuValue15" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in guangfuOptions"
@@ -25,7 +25,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>16号节点光伏扩建容量</span>
+                <span>16号节点光伏扩建容量(kW)</span>
                 <el-select v-model="guangfuValue16" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in guangfuOptions"
@@ -36,7 +36,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>水电扩建容量</span>
+                <span>水电扩建容量(kW)</span>
                 <el-select v-model="shuidianValue" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in shuidianOptions"
@@ -97,8 +97,8 @@
 
             <span class="showData" v-show="isTableShow">
                 <el-table  style="width: 100%;font-size: 2px;" :data="tableShow" fit="false">
-                    <el-table-column prop="xianlu" label="线路" width="70px" />
-                    <el-table-column prop="kuochong" label="扩容" width="70px" />
+                    <el-table-column prop="xianlu" label="线路" width="65px" />
+                    <el-table-column prop="kuochong" label="扩建容量（kW）" width="75px" />
                 </el-table>
             </span>
             <span class="tableName1" v-show="isTableShow">碳排率(kg/kWh)</span>

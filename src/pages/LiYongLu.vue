@@ -14,7 +14,7 @@
                 </el-select>
             </div>
             <div class="beishu">
-                <span>负荷装机容量(kW)</span>
+                <span>负荷功率(kW)</span>
                 <el-select v-model="fuheValue" class="m-2" placeholder=" ">
                     <el-option
                     v-for="item in fuheOptions"
@@ -129,15 +129,15 @@
     const fuheOptions = [
     {
         value: '1',
-        label: '1',
+        label: '600',
     },
     {
         value: '2',
-        label: '2',
+        label: '1200',
     },
     {
         value: '3',
-        label: '3',
+        label: '1800',
     },
     ]
     const shuidianOptions = [
