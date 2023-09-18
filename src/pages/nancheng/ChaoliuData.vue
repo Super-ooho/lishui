@@ -10,14 +10,7 @@
                     </el-select>
                 </div>
                 <div class="beishu">
-                    <span>负荷倍数1</span>
-                    <el-select v-model="beishuvalue1" class="m-2" placeholder="Select">
-                        <el-option v-for="item in beishu1Options" :key="item.value" :label="item.label"
-                            :value="item.value" />
-                    </el-select>
-                </div>
-                <div class="beishu">
-                    <span>负荷倍数2</span>
+                    <span>负荷规模</span>
                     <el-select v-model="beishuvalue2" class="m-2" placeholder="Select">
                         <el-option v-for="item in beishu2Options" :key="item.value" :label="item.label"
                             :value="item.value" />
@@ -134,38 +127,33 @@ const seasonoptions = [
         label: '冬季',
     },
 ]
-const beishu1Options = [
-    {
-        value: '1',
-        label: '300',
-    }
-]
+
 const beishu2Options = [
     {
-        value: '1',
-        label: '800',
+        value: '1.1',
+        label: '1.1',
     },
 
     {
-        value: '2',
-        label: '1600',
+        value: '1.2',
+        label: '1.2',
     },
     {
-        value: '3',
-        label: '2400',
+        value: '1.3',
+        label: '1.3',
     },
     {
-        value: '4',
-        label: '3200',
+        value: '1.4',
+        label: '1.4',
     },
 
     {
-        value: '5',
-        label: '4000',
+        value: '1.5',
+        label: '1.5',
     },
     {
-        value: '6',
-        label: '4800',
+        value: '1.6',
+        label: '1.6',
     },
 ]
 const centerDialogVisible1 = ref(false)
@@ -177,14 +165,13 @@ const dialogIsShow = reactive({
     'p4': false
 })
 function legalRongliang() {
-    const rongliang1 = (beishuvalue2.value == '1')
-    const rongliang2 = (beishuvalue2.value == '2')
-    const rongliang3 = (beishuvalue2.value == '3')
-    const rongliang4 = (beishuvalue2.value == '4')
-    const rongliang5 = (beishuvalue2.value == '5')
-    const rongliang6 = (beishuvalue2.value == '6')
-    const rongliang7 = (beishuvalue1.value != '')
-    const ifRongliang = (rongliang1 || rongliang2 || rongliang3 || rongliang4 || rongliang5 || rongliang6 && rongliang7)
+    const rongliang1 = (beishuvalue2.value == '1.1')
+    const rongliang2 = (beishuvalue2.value == '1.2')
+    const rongliang3 = (beishuvalue2.value == '1.3')
+    const rongliang4 = (beishuvalue2.value == '1.4')
+    const rongliang5 = (beishuvalue2.value == '1.5')
+    const rongliang6 = (beishuvalue2.value == '1.6')
+    const ifRongliang = (rongliang1 || rongliang2 || rongliang3 || rongliang4 || rongliang5 || rongliang6)
     return ifRongliang
 }
 function open2() {

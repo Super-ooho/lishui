@@ -3,21 +3,14 @@
         <el-aside width="80px" class="asideStyle">
             <div>
                 <div class="beishu">
-                    <span>负荷倍数1</span>
-                    <el-select v-model="guangfuValue16" class="m-2" placeholder=" ">
-                        <el-option v-for="item in guangfuOptions" :key="item.value" :label="item.label"
-                            :value="item.value" />
-                    </el-select>
-                </div>
-                <div class="beishu">
-                    <span>负荷倍数2</span>
-                    <el-select v-model="shuidianValue" class="m-2" placeholder=" ">
+                    <span style="font-size: 20px;">负荷规模</span>
+                    <el-select v-model="shuidianValue" class="m-2" placeholder=" " style="margin-top: 20px;">
                         <el-option v-for="item in shuidianOptions" :key="item.value" :label="item.label"
                             :value="item.value" />
                     </el-select>
                 </div>
                 <!-- <el-button type="primary" class="chaxunButton">查询</el-button> -->
-                <el-button :plain="true" @click="submit">查询</el-button>
+                <el-button :plain="true" @click="submit" style="margin-top: 20px;">查询</el-button>
             </div>
         </el-aside>
         <el-main style="position: relative;height: 550px;margin: 0;padding: 0;">
@@ -79,40 +72,64 @@ const visiable = reactive({
     '9': false,
     '10': false,
 })
-const guangfuOptions = [
-    {
-        value: '1',
-        label: '300',
-    },
-]
+
+
 const shuidianOptions = [
     {
-        value: '1',
-        label: '800',
+        value: '11',
+        label: '1.1',
     },
 
     {
-        value: '2',
-        label: '1600',
+        value: '12',
+        label: '1.2',
     },
     {
-        value: '3',
-        label: '2400',
+        value: '13',
+        label: '1.3',
     },
     {
-        value: '4',
-        label: '3200',
+        value: '14',
+        label: '1.4',
     },
 
     {
-        value: '5',
-        label: '4000',
+        value: '15',
+        label: '1.5',
     },
     {
-        value: '6',
-        label: '4800',
+        value: '16',
+        label: '1.6',
     },
 ]
+// const shuidianOptions = [
+//     {
+//         value: '1',
+//         label: '800',
+//     },
+
+//     {
+//         value: '2',
+//         label: '1600',
+//     },
+//     {
+//         value: '3',
+//         label: '2400',
+//     },
+//     {
+//         value: '4',
+//         label: '3200',
+//     },
+
+//     {
+//         value: '5',
+//         label: '4000',
+//     },
+//     {
+//         value: '6',
+//         label: '4800',
+//     },
+// ]
 const guihuaData = {
     '11': [0, 0, 0, 0, 0, 0, 150, 0, 0],
     '12': [150, 0, 0, 0, 0, 0, 150, 0, 0],

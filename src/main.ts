@@ -4,6 +4,11 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import router from './route/index'
 
-const app =  createApp(App)
+const app = createApp(App)
 app.use(ElementPlus).use(router)
+
+
+
+
+
 app.mount('#app')

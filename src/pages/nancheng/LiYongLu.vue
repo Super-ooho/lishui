@@ -2,21 +2,21 @@
     <el-container>
         <el-aside width="100px" class="asideStyle">
             <div>
-                <div class="beishu">
+                <!-- <div class="beishu">
                     <span>负荷倍数1</span>
                     <el-select v-model="fuheValue" class="m-2" placeholder=" ">
                         <el-option v-for="item in fuheOptions" :key="item.value" :label="item.label" :value="item.value" />
                     </el-select>
-                </div>
+                </div> -->
                 <div class="beishu">
-                    <span>负荷倍数2</span>
-                    <el-select v-model="shuidianValue" class="m-2" placeholder=" ">
+                    <span>负荷规模</span>
+                    <el-select v-model="shuidianValue" class="m-2" placeholder=" " style="margin-top: 20px;">
                         <el-option v-for="item in shuidianOptions" :key="item.value" :label="item.label"
                             :value="item.value" />
                     </el-select>
                 </div>
                 <!-- <el-button type="primary" class="chaxunButton">查询</el-button> -->
-                <el-button :plain="true" @click="submit">查询</el-button>
+                <el-button :plain="true" @click="submit" style="margin-top: 20px;">查询</el-button>
             </div>
         </el-aside>
         <el-main style="position: relative;height: 570px;margin: 0;padding: 0;">
@@ -68,41 +68,41 @@
 import { reactive, ref } from 'vue'
 import { ElMessageBox } from 'element-plus'
 const guangfuValue = ref('')
-const fuheValue = ref('')
+// const fuheValue = ref('')
 const shuidianValue = ref('')
 let isHeader = ref(false)
-const fuheOptions = [
-    {
-        value: '1',
-        label: '300',
-    },
-]
+// const fuheOptions = [
+//     {
+//         value: '1',
+//         label: '300',
+//     },
+// ]
 const shuidianOptions = [
     {
-        value: '1',
-        label: '800',
+        value: '11',
+        label: '1.1',
     },
 
     {
-        value: '2',
-        label: '1600',
+        value: '12',
+        label: '1.2',
     },
     {
-        value: '3',
-        label: '2400',
+        value: '13',
+        label: '1.3',
     },
     {
-        value: '4',
-        label: '3200',
+        value: '14',
+        label: '1.4',
     },
 
     {
-        value: '5',
-        label: '4000',
+        value: '15',
+        label: '1.5',
     },
     {
-        value: '6',
-        label: '4800',
+        value: '16',
+        label: '1.6',
     },
 ]
 const qianTableData = [
@@ -326,7 +326,7 @@ let beishuOption = ['11', '12', '13', '14', '15', '16']
 function submit() {
     guihuaqianData.pop()
     guihuahouData.pop()
-    let beishuStr = guangfuValue.value + fuheValue.value + shuidianValue.value
+    let beishuStr = guangfuValue.value + shuidianValue.value
     // console.log(beishuStr)
     if (beishuOption.includes(beishuStr)) {
         // console.log("nihao")
@@ -369,9 +369,9 @@ function submit() {
 }
 
 .mainMap {
-    background-image: url("../../assets/jingning.png");
+    background-image: url("../../assets/nancheng.png");
     background-repeat: no-repeat;
-    width: 750px;
+    width: 650px;
     /*疑问？：div的尺寸如何自适应背景图的尺寸*/
     height: 370px;
     background-size: 100%;
