@@ -44,6 +44,11 @@ window.ResizeObserver = class ResizeObserver extends _ResizeObserver {
 </script>
 
 <style>
+.common-layout {
+  width: 1540px;
+  margin: 0 auto;
+}
+
 .head {
   display: flex;
   flex-direction: row;

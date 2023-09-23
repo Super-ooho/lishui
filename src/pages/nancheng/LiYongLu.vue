@@ -9,7 +9,7 @@
                     </el-select>
                 </div> -->
                 <div class="beishu">
-                    <span>负荷规模</span>
+                    <span>负荷规模(kW)</span>
                     <el-select v-model="shuidianValue" class="m-2" placeholder=" " style="margin-top: 20px;">
                         <el-option v-for="item in shuidianOptions" :key="item.value" :label="item.label"
                             :value="item.value" />
@@ -80,29 +80,29 @@ let isHeader = ref(false)
 const shuidianOptions = [
     {
         value: '11',
-        label: '1.1',
+        label: '1650',
     },
 
     {
         value: '12',
-        label: '1.2',
+        label: '1800',
     },
     {
         value: '13',
-        label: '1.3',
+        label: '1950',
     },
     {
         value: '14',
-        label: '1.4',
+        label: '2100',
     },
 
     {
         value: '15',
-        label: '1.5',
+        label: '2250',
     },
     {
         value: '16',
-        label: '1.6',
+        label: '2400',
     },
 ]
 const qianTableData = [

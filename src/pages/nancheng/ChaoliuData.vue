@@ -10,7 +10,7 @@
                     </el-select>
                 </div>
                 <div class="beishu">
-                    <span>负荷规模</span>
+                    <span>负荷规模(kW)</span>
                     <el-select v-model="beishuvalue2" class="m-2" placeholder="Select">
                         <el-option v-for="item in beishu2Options" :key="item.value" :label="item.label"
                             :value="item.value" />
@@ -131,29 +131,29 @@ const seasonoptions = [
 const beishu2Options = [
     {
         value: '1.1',
-        label: '1.1',
+        label: '1650',
     },
 
     {
         value: '1.2',
-        label: '1.2',
+        label: '1800',
     },
     {
         value: '1.3',
-        label: '1.3',
+        label: '1950',
     },
     {
         value: '1.4',
-        label: '1.4',
+        label: '2100',
     },
 
     {
         value: '1.5',
-        label: '1.5',
+        label: '2250',
     },
     {
         value: '1.6',
-        label: '1.6',
+        label: '2400',
     },
 ]
 const centerDialogVisible1 = ref(false)
