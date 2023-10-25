@@ -54,61 +54,13 @@
                     <div class="jiedian10"></div>
                     <span class="jiedian10">{{ chengzaiNum[9] }}</span>
                 </div>
-                <div v-show="visiable[11]" class="jiedian">
-                    <div class="jiedian11"></div>
-                    <span class="jiedian11">{{ chengzaiNum[10] }}</span>
-                </div>
-                <div v-show="visiable[12]" class="jiedian">
-                    <div class="jiedian12"></div>
-                    <span class="jiedian12">{{ chengzaiNum[11] }}</span>
-                </div>
-                <div v-show="visiable[13]" class="jiedian">
-                    <div class="jiedian13"></div>
-                    <span class="jiedian13">{{ chengzaiNum[12] }}</span>
-                </div>
-                <div v-show="visiable[14]" class="jiedian">
-                    <div class="jiedian14"></div>
-                    <span class="jiedian14">{{ chengzaiNum[13] }}</span>
-                </div>
-                <div v-show="visiable[15]" class="jiedian">
-                    <div class="jiedian15"></div>
-                    <span class="jiedian15">{{ chengzaiNum[14] }}</span>
-                </div>
-                <div v-show="visiable[16]" class="jiedian">
-                    <div class="jiedian16"></div>
-                    <span class="jiedian16">{{ chengzaiNum[15] }}</span>
-                </div>
-                <div v-show="visiable[17]" class="jiedian">
-                    <div class="jiedian17"></div>
-                    <span class="jiedian17">{{ chengzaiNum[16] }}</span>
-                </div>
-                <div v-show="visiable[18]" class="jiedian">
-                    <div class="jiedian18"></div>
-                    <span class="jiedian18">{{ chengzaiNum[17] }}</span>
-                </div>
-                <div v-show="visiable[19]" class="jiedian">
-                    <div class="jiedian19"></div>
-                    <span class="jiedian19">{{ chengzaiNum[18] }}</span>
-                </div>
-                <div v-show="visiable[20]" class="jiedian">
-                    <div class="jiedian20"></div>
-                    <span class="jiedian20">{{ chengzaiNum[19] }}</span>
-                </div>
-                <div v-show="visiable[21]" class="jiedian">
-                    <div class="jiedian21"></div>
-                    <span class="jiedian21">{{ chengzaiNum[20] }}</span>
-                </div>
-                <div v-show="visiable[22]" class="jiedian">
-                    <div class="jiedian22"></div>
-                    <span class="jiedian22">{{ chengzaiNum[21] }}</span>
-                </div>
                 <div class="showData">
                     <div>该节点承载能力(kW)：</div>
                     <div>{{ showChengzai }}</div>
                 </div>
             </div>
         </el-main>
-        <img src="../../assets/chengzaili.png" alt="" class="chengzailiImg">
+        <img src="../../assets/chengzailinancheng.png" alt="" class="chengzailiImg">
     </el-container>
 </template>
 
@@ -247,54 +199,54 @@ const jiedianOptions = [
         value: '10',
         label: '节点10',
     },
-    {
-        value: '11',
-        label: '节点11',
-    },
-    {
-        value: '12',
-        label: '节点12',
-    },
-    {
-        value: '13',
-        label: '节点13',
-    },
-    {
-        value: '14',
-        label: '节点14',
-    },
-    {
-        value: '15',
-        label: '节点15',
-    },
-    {
-        value: '16',
-        label: '节点16',
-    },
-    {
-        value: '17',
-        label: '节点18',
-    },
-    {
-        value: '18',
-        label: '节点18',
-    },
-    {
-        value: '19',
-        label: '节点19',
-    },
-    {
-        value: '20',
-        label: '节点20',
-    },
-    {
-        value: '21',
-        label: '节点21',
-    },
-    {
-        value: '21',
-        label: '节点22',
-    }
+    // {
+    //     value: '11',
+    //     label: '节点11',
+    // },
+    // {
+    //     value: '12',
+    //     label: '节点12',
+    // },
+    // {
+    //     value: '13',
+    //     label: '节点13',
+    // },
+    // {
+    //     value: '14',
+    //     label: '节点14',
+    // },
+    // {
+    //     value: '15',
+    //     label: '节点15',
+    // },
+    // {
+    //     value: '16',
+    //     label: '节点16',
+    // },
+    // {
+    //     value: '17',
+    //     label: '节点18',
+    // },
+    // {
+    //     value: '18',
+    //     label: '节点18',
+    // },
+    // {
+    //     value: '19',
+    //     label: '节点19',
+    // },
+    // {
+    //     value: '20',
+    //     label: '节点20',
+    // },
+    // {
+    //     value: '21',
+    //     label: '节点21',
+    // },
+    // {
+    //     value: '21',
+    //     label: '节点22',
+    // }
 ]
 const visiable = reactive({
     '1': false,
@@ -307,21 +259,21 @@ const visiable = reactive({
     '8': false,
     '9': false,
     '10': false,
-    '11': false,
-    '12': false,
-    '13': false,
-    '14': false,
-    '15': false,
-    '16': false,
-    '17': false,
-    '18': false,
-    '19': false,
-    '20': false,
-    '21': false,
-    '22': false,
+    // '11': false,
+    // '12': false,
+    // '13': false,
+    // '14': false,
+    // '15': false,
+    // '16': false,
+    // '17': false,
+    // '18': false,
+    // '19': false,
+    // '20': false,
+    // '21': false,
+    // '22': false,
 })
 let showChengzai: any = ref('')
-const chengzaiNum = [0.00, 7677.21, 7677.21, 7677.21, 7642.91, 3329.64, 5135.79, 5135.79, 5135.79, 7484.61, 7484.61, 4103.59, 7456.29, 4839.41, 4839.41, 7456.29, 7456.29, 4400.26, 4400.26, 3045.79, 3045.79, 3045.79]
+const chengzaiNum = [0.00, 14082.78, 13139.54, 11021.43, 4776.28, 4487.66, 4850.76, 7313.41, 4912.01, 5639.67]
 function submit() {
     // console.log(visiable[jiedian.value])
     for (let i = 1; i <= 22; i++) {
@@ -343,11 +295,12 @@ function submit() {
 .chengzailiImg {
     position: absolute;
     z-index: 1;
-    width: 1100px;
-    height: 35px;
-    top: 390px;
-    left: 20px;
+    width: 860px;
+    height: 53px;
+    top: 455px;
+    left: 85px;
 }
+
 
 .jiedianButton {
     margin-bottom: 15px;
@@ -365,8 +318,9 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 127px;
-    top: 221px;
+    left: 223px;
+    top: 194px;
+
 }
 
 .jiedian2 {
@@ -375,8 +329,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 168px;
-    top: 221px;
+    left: 330px;
+    top: 194px;
 }
 
 .jiedian3 {
@@ -385,8 +339,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 205px;
-    top: 221px;
+    left: 461px;
+    top: 194px;
 }
 
 .jiedian4 {
@@ -395,8 +349,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 260px;
-    top: 221px;
+    left: 557px;
+    top: 211px;
 }
 
 .jiedian5 {
@@ -405,8 +359,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 287px;
-    top: 221px;
+    left: 284px;
+    top: 71px;
 }
 
 .jiedian6 {
@@ -415,8 +369,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 309px;
-    top: 270px;
+    left: 395px;
+    top: 71px;
 }
 
 .jiedian7 {
@@ -425,8 +379,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 274px;
-    top: 136px;
+    left: 396px;
+    top: 328px;
 }
 
 .jiedian8 {
@@ -435,8 +389,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 274px;
-    top: 90px;
+    left: 527px;
+    top: 71px;
 }
 
 .jiedian9 {
@@ -445,8 +399,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 274px;
-    top: 43px;
+    left: 621px;
+    top: 326px;
 }
 
 .jiedian10 {
@@ -455,8 +409,8 @@ function submit() {
     background-color: rebeccapurple;
     border-radius: 10px;
     position: absolute;
-    left: 330px;
-    top: 221px;
+    left: 621px;
+    top: 70px;
 }
 
 .jiedian11 {
@@ -606,7 +560,7 @@ function submit() {
 }
 
 .mainMap {
-    background-image: url("../../assets/jingning.png");
+    background-image: url("../../assets/nancheng.png");
     background-repeat: no-repeat;
     width: 700px;
     /*疑问？：div的尺寸如何自适应背景图的尺寸*/

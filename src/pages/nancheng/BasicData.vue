@@ -19,22 +19,13 @@
         <div class="demo-collapse">
             <el-collapse accordion>
                 <el-collapse-item title="夏季数据可视化" name="1">
-                    <img src="../../assets/keshihua11.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua12.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua13.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua14.png" alt="" class="imgsize">
+                    <img src="../../assets/keshihuanan1.png" alt="" class="imgsize">
                 </el-collapse-item>
                 <el-collapse-item title="过渡季数据可视化" name="2">
-                    <img src="../../assets/keshihua21.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua22.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua23.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua24.png" alt="" class="imgsize">
+                    <img src="../../assets/keshihuanan2.png" alt="" class="imgsize">
                 </el-collapse-item>
                 <el-collapse-item title="冬季数据可视化" name="3">
-                    <img src="../../assets/keshihua31.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua32.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua33.png" alt="" class="imgsize">
-                    <img src="../../assets/keshihua34.png" alt="" class="imgsize">
+                    <img src="../../assets/keshihuanan3.png" alt="" class="imgsize">
                 </el-collapse-item>
             </el-collapse>
         </div>
@@ -131,8 +122,8 @@ const tableData = [
 
 <style scoped>
 .imgsize {
-    width: 50%;
-    height: 200px;
+    width: 65%;
+    height: 275px;
     float: left;
 }
 

@@ -28,19 +28,19 @@
 
 
                 <span class="showData" v-show="isTableShow">
-                    <el-table style="width: 100%;font-size: 2px;" :data="tableShow" fit="false">
+                    <el-table style="width: 100%;font-size: 12px" :data="tableShow" fit="false">
                         <el-table-column prop="xianlu" label="线路" width="65px" />
                         <el-table-column prop="kuochong" label="扩建容量（kW）" width="75px" />
                     </el-table>
                 </span>
-                <span class="tableName1" v-show="isTableShow">碳排率(kg/kWh)</span>
-                <span class="showPaitan1" style="font-size: 1px;" v-show="isTableShow">
+                <span class="tableName1" style="font-size: 12px;" v-show="isTableShow">碳排率(kg/kWh)</span>
+                <span class="showPaitan1" style="font-size: 12px;" v-show="isTableShow">
                     <el-table style="width: 100%" :data="paitanArr">
                         <el-table-column prop="guihuaqian1" label="规划前" width="70px" />
                         <el-table-column prop="guihuahou1" label="规划后" width="70px" />
                     </el-table>
                 </span>
-                <span class="tableName2" style="font-size: 1px;" v-show="isTableShow">碳排放强度(kg/h)</span>
+                <span class="tableName2" style="font-size: 12px;" v-show="isTableShow">碳排放强度(kg/h)</span>
                 <span class="showPaitan2" v-show="isTableShow">
                     <el-table style="width: 100%" :data="paitanArr">
                         <el-table-column prop="guihuaqian2" label="规划前" width="70px" />
