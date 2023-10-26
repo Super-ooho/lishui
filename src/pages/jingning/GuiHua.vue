@@ -468,7 +468,7 @@ function submit() {
 .mainMap>span {
     /* opacity: 1; */
     color: red;
-    font-size: 5px;
+    font-size: 12px;
 }
 
 .showData {

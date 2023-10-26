@@ -13,7 +13,7 @@
                 <el-button :plain="true" @click="submit" style="margin-top: 20px;">查询</el-button>
             </div>
         </el-aside>
-        <el-main style="position: relative;height: 550px;margin: 0;padding: 0;">
+        <el-main style="position: relative;height: 550px;margin: 0;padding: 0; font-size: 12px;">
             <div class="mainMap">
                 <div class="xiantiao1" v-show="visiable[1]"></div>
                 <span class="xiantiao1" v-show="visiable[1]">{{ spanValue[0] }}</span>
@@ -248,7 +248,7 @@ function submit() {
 .mainMap>span {
     /* opacity: 1; */
     color: red;
-    font-size: 5px;
+    font-size: 12px;
 }
 
 .showData {
