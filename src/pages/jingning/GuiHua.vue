@@ -85,14 +85,14 @@
                         <el-table-column prop="kuochong" label="扩建容量（kW）" width="75px" />
                     </el-table>
                 </span>
-                <span class="tableName1" style="font-size: 12px;" v-show="isTableShow">碳排率(kg/kWh)</span>
+                <span class="tableName1" style="font-size: 12px;" v-show="isTableShow">减碳排率(kg/kWh)</span>
                 <span class="showPaitan1" style="font-size: 12px;" v-show="isTableShow">
                     <el-table style="width: 100%;font-size:12px;" :data="paitanArr">
                         <el-table-column prop="guihuaqian1" label="规划前" width="70px" />
                         <el-table-column prop="guihuahou1" label="规划后" width="70px" />
                     </el-table>
                 </span>
-                <span class="tableName2" style="font-size: 12px;" v-show="isTableShow">碳排放强度(kg/h)</span>
+                <span class="tableName2" style="font-size: 12px;" v-show="isTableShow">减碳排放强度(kg/h)</span>
                 <span class="showPaitan2" v-show="isTableShow">
                     <div class="tablefs">
                         <el-table style="width: 100%;font-size:12px;" :data="paitanArr">
@@ -163,11 +163,6 @@ const guangfuOptions = [
     },
 ]
 const shuidianOptions = [
-    {
-        value: '1',
-        label: '800',
-    },
-
     {
         value: '2',
         label: '1600',

@@ -117,15 +117,7 @@ const fuheOptions = [
     {
         value: '1',
         label: '600',
-    },
-    {
-        value: '2',
-        label: '1200',
-    },
-    {
-        value: '3',
-        label: '1800',
-    },
+    }
 ]
 const shuidianOptions = [
     {

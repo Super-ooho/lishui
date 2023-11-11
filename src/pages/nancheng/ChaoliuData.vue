@@ -445,8 +445,8 @@ function appear9(event: any) {
     width: 7px;
     height: 47px;
     position: absolute;
-    top: 147px;
-    left: 281px;
+    top: 204px;
+    left: 337px;
 }
 
 .xiantiao71 {
