@@ -9,6 +9,13 @@
                             :value="item.value" />
                     </el-select>
                 </div>
+                <div class="beishu">
+                    <div class="jiedianButton">是否选择暂态</div>
+                    <el-select v-model="zantai" class="m-2 jiedianButton" placeholder="Select">
+                        <el-option v-for="item in zantaiOptions" :key="item.value" :label="item.label"
+                            :value="item.value" />
+                    </el-select>
+                </div>
                 <el-button :plain="true" @click="submit">查询</el-button>
             </div>
         </el-aside>
@@ -158,6 +165,7 @@ const tableData = [
     },
 ]
 const jiedian = ref('')
+const zantai = ref('')
 const jiedianOptions = [
     {
         value: '1',
@@ -247,6 +255,16 @@ const jiedianOptions = [
     //     value: '21',
     //     label: '节点22',
     // }
+]
+const zantaiOptions = [
+    {
+        value: "0",
+        label: "否"
+    },
+    {
+        value: "1",
+        label: "是"
+    }
 ]
 const visiable = reactive({
     '1': false,

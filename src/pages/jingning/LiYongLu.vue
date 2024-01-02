@@ -3,7 +3,7 @@
         <el-aside width="100px" class="asideStyle">
             <div>
                 <div>
-                    <span>光伏装机容量(kW)</span>
+                    <span>光伏总装机容量(kW)</span>
                     <el-select v-model="guangfuValue" class="m-2" placeholder=" ">
                         <el-option v-for="item in guangfuOptions" :key="item.value" :label="item.label"
                             :value="item.value" />
@@ -16,7 +16,7 @@
                     </el-select>
                 </div>
                 <div class="beishu">
-                    <span>水电装机容量(kW)</span>
+                    <span>水电总装机容量(kW)</span>
                     <el-select v-model="shuidianValue" class="m-2" placeholder=" ">
                         <el-option v-for="item in shuidianOptions" :key="item.value" :label="item.label"
                             :value="item.value" />

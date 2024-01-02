@@ -1,11 +1,17 @@
 <template>
     <el-container>
-        <el-aside width="80px" class="asideStyle">
+        <el-aside width="110px" class="asideStyle">
             <div>
                 <div class="beishu">
                     <span style="font-size: 18px;">负荷规模(kW)</span>
-                    <el-select v-model="shuidianValue" class="m-2" placeholder=" " style="margin-top: 20px;">
+                    <el-select v-model="shuidianValue" class="m-2" placeholder=" " style="margin-top: 20px;font-size: 13px;"
+                        size="small">
                         <el-option v-for="item in shuidianOptions" :key="item.value" :label="item.label"
+                            :value="item.value" />
+                    </el-select>
+                    <span style="font-size: 18px;">投建目标</span>
+                    <el-select v-model="economicValue" class="m-2" placeholder=" " style="margin-top: 10px;" size="small">
+                        <el-option v-for="item in economicOptions" :key="item.value" :label="item.label"
                             :value="item.value" />
                     </el-select>
                 </div>
@@ -47,6 +53,12 @@
                         <el-table-column prop="guihuahou2" label="规划后" width="70px" />
                     </el-table>
                 </span>
+                <span class="tableName3" style="font-size: 12px;" v-show="isTableShow">投建成本</span>
+                <span class="showPaitan3" v-show="isTableShow">
+                    <el-table style="width: 100%" :data="paitanArr">
+                        <el-table-column prop="guihuaqian3" label="" width="70px" />
+                    </el-table>
+                </span>
             </div>
         </el-main>
     </el-container>
@@ -60,6 +72,7 @@ let isTableShow = ref(false)
 
 const guangfuValue16 = ref('')
 const shuidianValue = ref('')
+const economicValue = ref('')
 const visiable = reactive({
     '1': false,
     '2': false,
@@ -102,6 +115,16 @@ const shuidianOptions = [
         label: '2400',
     },
 ]
+const economicOptions = [
+    {
+        value: '1',
+        label: "经济性投建"
+    },
+    {
+        value: "2",
+        label: "经济低碳投建"
+    }
+]
 // const shuidianOptions = [
 //     {
 //         value: '1',
@@ -131,25 +154,37 @@ const shuidianOptions = [
 //     },
 // ]
 const guihuaData = {
-    '11': [0, 0, 0, 0, 0, 0, 150, 0, 0],
-    '12': [150, 0, 0, 0, 0, 0, 150, 0, 0],
-    '13': [150, 0, 0, 0, 0, 0, 240, 0, 0],
-    '14': [150, 150, 0, 0, 0, 0, 295, 0, 0],
-    '15': [150, 150, 0, 0, 0, 0, 295, 0, 0],
-    '16': [295, 150, 0, 0, 0, 0, 335, 0, 0],
+    '111': [0, 0, 0, 0, 0, 0, 150, 0, 0],
+    '121': [150, 0, 0, 0, 0, 0, 150, 0, 0],
+    '131': [150, 0, 0, 0, 0, 0, 240, 0, 0],
+    '141': [150, 150, 0, 0, 0, 0, 295, 0, 0],
+    '151': [150, 150, 0, 0, 0, 0, 295, 0, 0],
+    '161': [295, 150, 0, 0, 0, 0, 335, 0, 0],
+    '112': [0, 0, 0, 0, 0, 0, 150, 0, 0],
+    '122': [150, 0, 0, 0, 0, 0, 150, 0, 0],
+    '132': [150, 0, 0, 0, 0, 0, 240, 0, 0],
+    '142': [150, 150, 0, 0, 0, 0, 295, 0, 0],
+    '152': [150, 150, 0, 0, 0, 0, 295, 0, 0],
+    '162': [295, 150, 0, 0, 0, 0, 335, 0, 0],
 }
 const paitanData = {
-    '11': [2.02, 2.02, 2535, 2535],
-    '12': [2.01, 2.02, 2688, 2791],
-    '13': [2.01, 2.02, 3038, 3045],
-    '14': [2.01, 2.02, 3266, 3299],
-    '15': [2.01, 2.02, 3503, 3553],
-    '16': [2.01, 2.02, 3752, 3808],
+    '111': [2.02, 2.02, 2535, 2535, 585],
+    '121': [2.01, 2.02, 2688, 2791, 1178],
+    '131': [2.01, 2.02, 3038, 3045, 1483],
+    '141': [2.01, 2.02, 3266, 3299, 1749],
+    '151': [2.01, 2.02, 3503, 3553, 1749],
+    '161': [2.01, 2.02, 3752, 3808, 1936],
+    '112': [2.02, 2.02, 2535, 2535, 585],
+    '122': [2.01, 2.02, 2688, 2791, 1178],
+    '132': [2.01, 2.02, 3038, 3045, 1483],
+    '142': [2.01, 2.02, 3266, 3299, 1749],
+    '152': [2.01, 2.02, 3503, 3553, 1749],
+    '162': [2.01, 2.02, 3752, 3808, 1936],
 }
 let paitanObj: LooseObject = {}
 // let arrNotZero:any[]
 let spanValue = reactive([0, 0, 0, 0, 0, 0, 0, 0, 0])
-let paitanValue = reactive([0, 0, 0, 0])
+let paitanValue = reactive([0, 0, 0, 0, 0])
 let paitanArr: any = reactive([])
 interface LooseObject {
     [key: string]: any
@@ -161,7 +196,9 @@ function submit() {
     tableShow = []
     paitanArr = []
     let arrNotZero: Array<any> = []
-    let beishuStr = guangfuValue16.value + shuidianValue.value
+    let beishuStr = shuidianValue.value + economicValue.value
+    console.log(beishuStr);
+
     if (beishuStr in guihuaData) {
         let i: any
         for (i in guihuaData[beishuStr]) {
@@ -204,6 +241,7 @@ function submit() {
         paitanObj.guihuahou1 = paitanValue[1]
         paitanObj.guihuaqian2 = paitanValue[2]
         paitanObj.guihuahou2 = paitanValue[3]
+        paitanObj.guihuaqian3 = paitanValue[4]
         paitanArr.push(paitanObj)
         // console.log(paitanData[beishuStr])
     }
@@ -270,12 +308,21 @@ function submit() {
 }
 
 .showPaitan2 {
-    width: 150px;
+    width: 140px;
     height: 345px;
     background-color: none;
     position: absolute;
     left: 850px;
     top: 200px;
+}
+
+.showPaitan3 {
+    width: 70px;
+    height: 105px;
+    background-color: none;
+    position: absolute;
+    left: 890px;
+    top: 330px;
 }
 
 .tableName1 {
@@ -297,6 +344,19 @@ function submit() {
     position: absolute;
     left: 850px;
     top: 150px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20px;
+    /* color: black; */
+}
+
+.tableName3 {
+    width: 150px;
+    height: 50px;
+    /* background-color: red; */
+    position: absolute;
+    left: 850px;
+    top: 285px;
     z-index: 1;
     text-align: center;
     padding-top: 20px;
